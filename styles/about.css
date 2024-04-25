@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #333; /* Dark background color for the entire page */
+    color: rgb(15, 188, 236); /* Text color */
+  }
+  /* Header styles */
+.header {
+  background-color: #444; /* Header background color */
+  padding: 10px; /* Header padding */
+  border-bottom: 2px solid #666; /* Border bottom for the header */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between; /* Space between logo and text */
+  align-items: center; /* Center items vertically */
+  width: 80%; /* Take full width */
+}
+
+.header .logo img {
+  max-width: 80px; /* Adjust logo size as needed */
+}
+
+.header h1 {
+  margin: 0; /* Remove margin for h1 */
+  font-size: 2rem; /* Adjust font size for smaller screens */
+}
+
+ /* Navbar styles */
+.navbar {
+  /* Navbar background color */
+  padding: 20px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar .nav-links li:last-child {
+  margin-right: 0; /* Remove margin for the last item */
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: rgb(15, 188, 236);
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #f0f4f5; /* Change color on hover */
+}
+
+  /* Footer styles */
+  .footer {
+    background-color: #000; /* Footer background color */
+    padding: 20px 0;
+    text-align: center;
+  }
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .navbar .container {
+      padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .navbar .logo img {
+      max-width: 80px; /* Reduce logo size for smaller screens */
+    }
+  
+    .navbar .nav-links li {
+      margin-right: 10px; /* Reduce margin between navbar links for smaller screens */
+    }
+  }
+
+  /* Styles for about page */
+.about {
+    background-color: #333; /* Dark background color for the entire page */
+    color: #fff; /* Text color */
+    min-height: calc(100vh - 80px); /* Ensure full viewport height minus navbar height */
+    padding: 20px; /* Add padding for all corners of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.footer {
+    /* footer styles */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000; /* Footer background color */
+        padding: 10px 0;
+        text-align: center;
+    }
+    

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="modernizr.custom.40753.js"></script>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="images/logo.png" alt="my Logo"> <!-- place holder for my logo which will be an image of my name-->
+    </div>
+    <h1>Welcome to My Portfolio</h1>
+  </div>
+</header>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+</nav>
+<!-- 
+    This form is powered by web3forms, it does not require 
+    a server. its very simple form that collects name,email 
+    and a message and once the form is submited i get the 
+    message on my umb email. 
+
+    i still have to read some more documentaion on how to use it correctly,
+    for now its working but i get an error whenever i go to contact page and try 
+    to return to home page.
+-->
+
+<div class="contact-form">
+  <h2>Contact Me</h2>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="85d5c4c7-8c76-49c0-998f-83964ede16f0">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br>
+
+    <!-- Table -->
+    <label for="table">Additional Information:</label><br>
+    <table>
+      <tr>
+        <td><label for="occupation">Occupation:</label></td>
+        <td><input type="text" id="occupation" name="occupation"></td>
+      </tr>
+      <tr>
+        <td><label for="phone">Phone:</label></td>
+        <td><input type="tel" id="phone" name="phone"></td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </table>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+
+<footer class="footer">
+  <!-- Footer content here -->
+  <p> Abdi Salah </p>
+</footer>
+
+
+
+</body>
+</html>
