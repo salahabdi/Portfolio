@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <script src="modernizr.custom.40753.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Me</title>
   <link rel="stylesheet" href="styles/contact.css">
 </head>
@@ -31,31 +30,16 @@
     </ul>
   </div>
 </nav>
-</nav>
-<!-- 
-    This form is powered by web3forms, it does not require 
-    a server. its very simple form that collects name,email 
-    and a message and once the form is submited i get the 
-    message on my umb email. 
-
-    i still have to read some more documentaion on how to use it correctly,
-    for now its working but i get an error whenever i go to contact page and try 
-    to return to home page.
--->
 
 <div class="contact-form">
-  <h2>Contact Me</h2>
-  <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="85d5c4c7-8c76-49c0-998f-83964ede16f0">
+  <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    <input type="hidden" name="access_key" value="ea286e04-3366-4a76-878c-c092f8a88273">
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
-
+    <input type="text" id="name" name="name" required>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required></textarea><br>
-
+    <input type="email" id="email" name="email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
     <!-- Table -->
     <label for="table">Additional Information:</label><br>
     <table>
@@ -69,18 +53,16 @@
       </tr>
       <!-- Add more rows as needed -->
     </table>
-
-    <button type="submit">Send</button>
+    <button type="submit">Submit</button>
+    <div id="formResult"></div>
   </form>
 </div>
 
-
+<!-- Footer -->
 <footer class="footer">
-  <!-- Footer content here -->
-  <p> Abdi Salah </p>
+  <p> &copy Abdi Salah 2024 </p>
 </footer>
 
-
-
+<script src="js/contact.js"></script>
 </body>
 </html>
