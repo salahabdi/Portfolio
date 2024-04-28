@@ -5,75 +5,33 @@ body {
   font-family: sans-serif;
   background-color: rgba(1,11,23,255); /* Dark background color for the entire page */
   color: rgb(15, 188, 236); /* Text color */
+  position: top 60px; ;
+
 }
 /* Header styles */
 .header {
-  background-color: rgb(1, 0, 5); /* Header background color */
   padding: 10px; /* Header padding */
-  border-bottom: 2px solid #666; /* Border bottom for the header */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  background-color: rgb(30, 21, 21); /* Header background color */
 }
 
 .header .container {
-  max-width: 1200px;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: space-between; /* Space between logo and text */
   align-items: center; /* Center items vertically */
   width: 80%; /* Take full width */
+  height: 60px;
 }
 
 .header .logo img {
-  max-width: 80px; /* Adjust logo size as needed */
-}
-
-.header h1 {
-  margin: 0; /* Remove margin for h1 */
-  font-size: 2rem; /* Adjust font size for smaller screens */
-}
-/* contact me button */
-.contact-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.fa {
-  padding: 10px; /* Reduced padding for better spacing */
-  font-size: 24px; /* Increased font size to 48px */
-  width: auto; /* Let the width adjust to the content */
-  text-align: center;
-  text-decoration: none;
-  margin: 0 0 5px; /* Adjusted margin */
-  display: inline-block; /* Display icons inline */
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-linkedin {
-  background: none;
-  color: white;
-  
-}
-
-.fab.fa-github {
-  color: rgb(247, 48, 48); /* Applied red color to GitHub icon */
-}
-
-.contact-button:hover {
-  background-color: #3291f7;
+  max-width: 60px; /* Adjust logo size as needed */
 }
 
 /* Navbar styles */
 .navbar {
-  /* Navbar background color */
-  padding: 20px 0;
+  padding: 20px 0; /* Navbar padding */
 }
 
 .navbar .container {
@@ -100,13 +58,37 @@ body {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: rgb(15, 188, 236);
+  color: #fff; /* Navbar link color */
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #f0f4f5; /* Change color on hover */
+  color: #0bbce9; /* Change color on hover */
 }
+
+
+/* contact me button */
+.contact-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 40px;
+}
+
+.contact-button:hover {
+  background-color: #3291f7;
+}
+
+/* Navbar styles */
+.navbar {
+  /* Navbar background color */
+  padding: 20px 0;
+}
+
+
 
 /* Styles for home page */
 .home {
@@ -136,18 +118,49 @@ body {
 .headings h3,
 .headings h4 {
   margin: 0;
-  font-size: 3rem; /* Adjust heading font size */
+  font-size: 4rem; /* Adjust heading font size */
 }
 
 .footer {
-  /* footer styles */
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #000; /* Footer background color */
+  background-color: #000;
   padding: 10px 0;
   text-align: center;
 }
+
+.footer p {
+  display: inline-block; /* Ensure text is inline */
+  vertical-align: middle; /* Align text vertically with icons */
+  margin: 0;
+}
+
+.bttn {
+  display: inline-block; /* Ensure icons are inline */
+  vertical-align: middle; /* Align icons vertically with text */
+}
+
+.fa {
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: white; /* Set icon color */
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: none;
+}
+
+.fa-github {
+  color: rgb(247, 48, 48);
+}
+
+
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {

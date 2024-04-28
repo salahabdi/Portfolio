@@ -2,36 +2,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: #333;
+  background-color: rgba(1,11,23,255);
   color: rgb(15, 188, 236);
 }
 
 /* Header styles */
 .header {
-  background-color: rgb(1, 0, 5); /* Header background color */
   padding: 10px; /* Header padding */
-  border-bottom: 2px solid #666; /* Border bottom for the header */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  background-color: rgb(30, 21, 21); /* Header background color */
 }
 
 .header .container {
-  max-width: 1200px;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: space-between; /* Space between logo and text */
   align-items: center; /* Center items vertically */
   width: 80%; /* Take full width */
+  height: 60px;
 }
 
 .header .logo img {
-  max-width: 80px; /* Adjust logo size as needed */
+  max-width: 60px; /* Adjust logo size as needed */
 }
 
 /* Navbar styles */
 .navbar {
-  /* Navbar background color */
-  padding: 20px 0;
+  padding: 20px 0; /* Navbar padding */
 }
 
 .navbar .container {
@@ -58,20 +56,24 @@ body {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: rgb(15, 188, 236);
+  color: #fff; /* Navbar link color */
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #f0f4f5; /* Change color on hover */
+  color: #0bb9ed; /* Change color on hover */
 }
 
+.contact {
+  background-color: rgba(1,11,23,255);
+  
+}
 .contact-form {
   width: 60%;
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
-  background-color: #f0f4f5;
+  
 }
 
 .contact-form label {
@@ -81,13 +83,19 @@ body {
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
+.contact-form input[type="tel"],
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Increase padding for a smoother look */
   margin-bottom: 10px;
   border-radius: 5px;
   box-sizing: border-box;
+  border: 1px solid #ccc; /* Add a border */
+  background-color: rgb(2, 59, 74); /* Change background color of text box */
+  color: rgb(248, 213, 213); /* Change text color inside text box */
+  box-shadow: #000;
 }
+
 
 .contact-form button[type="submit"] {
   width: 100%;
@@ -107,12 +115,43 @@ body {
 #formResult {
   margin-top: 10px;
 }
+
 .footer {
-  /* footer styles */
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #000; /* Footer background color */
+  background-color: #000;
   padding: 10px 0;
   text-align: center;
+}
+
+.footer p {
+  display: inline-block; /* Ensure text is inline */
+  vertical-align: middle; /* Align text vertically with icons */
+  margin: 0;
+}
+
+.bttn {
+  display: inline-block; /* Ensure icons are inline */
+  vertical-align: middle; /* Align icons vertically with text */
+  font-size: 24px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: white; /* Set icon color */
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: none;
+}
+
+.fa-github {
+  color: rgb(247, 48, 48);
 }

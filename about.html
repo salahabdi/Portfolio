@@ -6,6 +6,7 @@
   <script src="modernizr.custom.40753.js"></script>
   <title>About</title>
   <link rel="stylesheet" href="styles/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -13,39 +14,101 @@
 <header class="header">
   <div class="container">
     <div class="logo">
-      <img src="images/logo.png" alt="my Logo"> <!-- place holder for my logo which will be an image of my name-->
+      <img src="images/Portfolio.png" alt="my Logo"> <!-- logo image that consist of my name and a graduation hat -->
     </div>
-    <h1>Welcome to My Portfolio</h1>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="container">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="resume.html">Resume</a></li>
-    </ul>
-  </div>
-</nav>
 
 <!-- Main Content -->
 <div class="about">
   <div class="content-container">
-    <h1>About Me</h1>
-    <p>This is the about page content. I will have an introduction of myself.</p>
-    <p> Also add/attach a downloadable pdf link for my resume </p>
+    <div class="profile">
+      <img src="images/umassBoston.jpeg" width="400px" height="600px" alt="Profile Picture" class="profile-picture">
+    </div>
+    <div class="bio">
+      <h1>About Me</h1>
+      <p>Experienced in IT with a strong inclination towards data analytics, 
+        I bring a diverse skill set encompassing software development, project management, 
+        and business intelligence. With a solid foundation in software development gained 
+        through internships and hands-on projects, I am adept at collaborating with cross-functional 
+        teams to deliver user-centric solutions. My passion lies in harnessing data analytics to drive 
+        informed decision-making and optimizing business processes. I am seeking opportunities 
+        where I can leverage my analytical skills and contribute to organizational success 
+        across various industries. Currently in school, expected graduation in May 2025. I'm passionate about data and 
+        continuously strive to expand my knowledge in this field.</p>
+      <p>Feel free to connect with me via email at <a href="mailto:abdirahman.salah001@umb.edu">abdirahman.salah001@umb.edu</a>.</p>
+      <p>Check out my resume: <a href="resume.html" >Resume</a></p>
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+        <p class="tab-links" onclick="opentab('coursework')">Coursework</p>
+        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+    </div>
+    <div class="tab-contents active-tab" id="education">
+        <ul>
+            <li><span>2025 </span><br>BS from Umass Boston</li>
+            <li><span>2022 </span><br>Associate from BunkerHill</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="coursework">
+        <ul>
+            <li><span>IT114</span><br>Introduction To Java</li>
+            <li><span>IT370</span><br>Introduction To Analytics</li>
+            <li><span>IT285</span><br>Ethic In Computing</li>
+            <li><span>IT230</span><br>Relational Databases </li>
+            <li><span>IT471</span><br>Data Warehouse </li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="experience">
+        <ul>
+        <li><span>May 2021 - Sept 2021</span><br>Software Developer internship</li>
+        <li><span>Jan 2021 - Dec 2021</span><br>Hack Diversity Fellowship </li>
+        <li><span>Feb 2018 - March 2021 </span><br>Operation Assistance at SP+ Corporation</li>
+
+        </ul>
+    </div>
+    </div>
   </div>
+ 
 </div>
+
 
 <!-- Footer -->
 <footer class="footer">
-  <P> Abdi Salah </P>
+  <p> &copy Abdi Salah 2024 </p>
+  <div class="bttn">
+    <a href="https://www.linkedin.com/in/abdirahman-salah/" target="_blank" class="fa fa-linkedin"></a>
+    <!-- GitHub Button -->
+    <a href="https://github.com/salahabdi/" target="_blank" class="fa fa-github"></a>
+  </div>
 </footer>
 
+
+<script>
+  function opentab(tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tab-contents");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tab-links");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active-link");
+  }
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.classList.add("active-link");
+}
+
+</script>
 
 </body>
 </html>

@@ -1,41 +1,36 @@
+/* Complete CSS */
+
+/* Reset */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #333; /* Dark background color for the entire page */
-    color: rgb(15, 188, 236); /* Text color */
-  }
-  /* Header styles */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Header styles */
 .header {
-  background-color: #444; /* Header background color */
   padding: 10px; /* Header padding */
-  border-bottom: 2px solid #666; /* Border bottom for the header */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  background-color: rgb(30, 21, 21); /* Header background color */
 }
 
 .header .container {
-  max-width: 1200px;
   margin: 0 auto;
-  display:flex;
+  display: flex;
   justify-content: space-between; /* Space between logo and text */
   align-items: center; /* Center items vertically */
   width: 80%; /* Take full width */
+  height: 60px;
 }
 
 .header .logo img {
-  max-width: 80px; /* Adjust logo size as needed */
+  max-width: 60px; /* Adjust logo size as needed */
 }
 
-.header h1 {
-  margin: 0; /* Remove margin for h1 */
-  font-size: 2rem; /* Adjust font size for smaller screens */
-}
-
- /* Navbar styles */
+/* Navbar styles */
 .navbar {
-  /* Navbar background color */
-  padding: 20px 0;
+  padding: 20px 0; /* Navbar padding */
 }
 
 .navbar .container {
@@ -62,55 +57,176 @@ body {
 
 .navbar .nav-links a {
   text-decoration: none;
-  color: rgb(15, 188, 236);
+  color: #fff; /* Navbar link color */
   transition: color 0.3s;
 }
 
 .navbar .nav-links a:hover {
-  color: #f0f4f5; /* Change color on hover */
+  color: #0bc2f0; /* Change color on hover */
 }
 
-  /* Footer styles */
-  .footer {
-    background-color: #000; /* Footer background color */
-    padding: 20px 0;
-    text-align: center;
-  }
-  /* Media queries for responsiveness */
-  @media screen and (max-width: 768px) {
-    .navbar .container {
-      padding: 0 10px; /* Reduce padding for smaller screens */
-    }
-  
-    .navbar .logo img {
-      max-width: 80px; /* Reduce logo size for smaller screens */
-    }
-  
-    .navbar .nav-links li {
-      margin-right: 10px; /* Reduce margin between navbar links for smaller screens */
-    }
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar .container {
+    padding: 0 10px; /* Reduce padding for smaller screens */
   }
 
-  /* Styles for about page */
+  .navbar .logo img {
+    max-width: 80px; /* Reduce logo size for smaller screens */
+  }
+
+  .navbar .nav-links li {
+    margin-right: 10px; /* Reduce margin between navbar links for smaller screens */
+  }
+}
+
+/* Styles for about page */
 .about {
-    background-color: #333; /* Dark background color for the entire page */
-    color: #fff; /* Text color */
-    min-height: calc(100vh - 80px); /* Ensure full viewport height minus navbar height */
-    padding: 20px; /* Add padding for all corners of the page */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: rgba(1,11,23,255); /* Dark background color for the entire page */
+  color: rgb(8, 103, 236); /* Text color */
+  padding: 20px; /* Add padding for all corners of the page */
+  padding: 0 20px; /* Add padding to adjust spacing */
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+  padding: auto;
+}
+
+.profile {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.profile-picture {
+  width: 100%; /* Make the picture fill its container */
+  border-radius: 10px; /* Add border radius for a rounded look */
+}
+
+.bio {
+  flex: 2;
+}
+
+.about h1 {
+  font-size: 2em; /* Larger font size for heading */
+  margin-bottom: 20px; /* Add spacing below heading */
+}
+
+.about p {
+  font-size: 1.1em; /* Font size for paragraphs */
+  margin-bottom: 15px; /* Add spacing below paragraphs */
+  max-width: 600px; /* Limit the width of paragraphs for better readability */
+  line-height: 1.5; /* Set line height for better readability */
+}
+
+.about a {
+  color: #15BCD6; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.about a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.sublinks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 
+.tab-titles {
+  flex-basis: 100%; /* Ensure sublinks take full width */
+  display: flex;
+  justify-content: flex-start; /* Align sublinks to the left */
+  margin-bottom: 20px; /* Add margin between sublinks and bio */
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;    
+  background: orange;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+ 
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: orange;
+  font-size: 14px;
+}
+
+.tab-contents {
+  flex-basis: 100%; /* Ensure sublinks take full width */
+  display: none; /* Initially hide tab contents */
+  margin-top: 20px; /* Add space between sublinks and tab contents */
+}
+
+.tab-contents.active-tab {
+  display: block; /* Show active tab content */
+}
 
 .footer {
-    /* footer styles */
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #000; /* Footer background color */
-        padding: 10px 0;
-        text-align: center;
-    }
-    
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer p {
+  display: inline-block; /* Ensure text is inline */
+  vertical-align: middle; /* Align text vertically with icons */
+  margin: 0;
+  color: #15BCD6; /* text color */
+}
+
+.bttn {
+  display: inline-block; /* Ensure icons are inline */
+  vertical-align: middle; /* Align icons vertically with text */
+  font-size: 24px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 24px;
+  text-decoration: none;
+  color: white; /* Set icon color */
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: none;
+}
+
+.fa-github {
+  color: rgb(247, 48, 48);
+}
