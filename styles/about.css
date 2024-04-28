@@ -83,7 +83,7 @@ body {
 /* Styles for about page */
 .about {
   background-color: rgba(1,11,23,255); /* Dark background color for the entire page */
-  color: rgb(8, 103, 236); /* Text color */
+  color: rgb(15, 175, 238); /* Text color */
   padding: 20px; /* Add padding for all corners of the page */
   padding: 0 20px; /* Add padding to adjust spacing */
 }
@@ -204,6 +204,7 @@ body {
   vertical-align: middle; /* Align text vertically with icons */
   margin: 0;
   color: #15BCD6; /* text color */
+  font-style: italic;
 }
 
 .bttn {
